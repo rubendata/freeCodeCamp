@@ -1,21 +1,36 @@
 body {
       font-size: 21px;
       line-height: 1.6;
+      
+      
 }
 h1 {
       text-align: center;
-    }
-    
+      padding: 0;
+      margin: 0;
+}
+
+h2 {
+      text-align: center;
+      padding: 0;
+      margin: 0;  
+}
+
+#main {
+      background-color: darkgray;
+      
+}
+
 #img-div {
-text-align: center;
-background-color: darkgray;
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      margin: 0 auto;
 }
 img {
-      max-width: 40%;
+      max-width: 30%;
       height: auto;
       box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
@@ -27,20 +42,41 @@ figcaption {
 
 
 #tribute-info{
-      background-color: teal;
       display: flex;
       height: fit-content;
       align-items: center;
       flex-direction: column;
       
-}
-
-#more{
-      background-color: thistle;
       
 }
 
+
+
 #timeline{
-      background-color: tomato;
-      width: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: beige;
+      padding-bottom: 10px;
+      
+}
+
+.list-item{
+      width: 90%;
+      margin-top: 10px;
+      padding: 5px;
+      border: solid;
+      background-color: lightgray;
+      
+}
+
+.list-item:hover{
+      background-color: white;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      
+}
+
+#more{
+      
+      
 }

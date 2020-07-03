@@ -10,22 +10,30 @@
      <p id="description">this is a description</p>
      <form>
             <!--- dropdown field -->
-            <label for="enter-salutation" id="salutation-label">Title:</label>
-            <input name="enter-salutation" id="enter-salutation" list="salutations" type="dropdown" placeholder="choose your salutation" >
-                  <datalist id="salutations">
-                        <option value="Mr.">
-                        <option value="Mrs.">
-                        <option value="Ms.">
-                  </datalist>
+            <div>
+                  <label for="enter-salutation" id="salutation-label">Title:</label>
+                  <input name="enter-salutation" id="enter-salutation" list="salutations" type="dropdown" placeholder="choose your salutation" >
+                        <datalist id="salutations">
+                              <option value="Mr.">
+                              <option value="Mrs.">
+                              <option value="Ms.">
+                        </datalist>
+            </div>
             <!--- text input field -->
-            <label for="enter-name" id="name-label">Your name:</label>
-            <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" >
+            <div>
+                  <label for="enter-name" id="name-label">Your name:</label>
+                  <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" >
+            </div>
             <!--- email input field -->
-            <label for="enter-email" id="email-label">Your email:</label>
-            <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" >
+            <div>
+                  <label for="enter-email" id="email-label">Your email:</label>
+                  <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" >
+            </div>
             <!--- number input field -->
-            <label for="enter-number" id="number-label">A number:</label>
-            <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Enter a number between 0 and 100" >
+            <div>
+                  <label for="enter-number" id="number-label">A number:</label>
+                  <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Enter a number between 0 and 100" >
+            </div>
             <!--- radio button -->
             <p>Your age:</p>
             <div>
@@ -65,13 +73,14 @@
                   <label for="hobby4">Others</label>
             </div>
             <!-- text area -->
-            <label for="story">Tell us your story:</label>
-            
-            <textarea id="story" name="story"
-                  rows="5" cols="33">
-            Tell us something about you
-            </textarea>
-
+            <div>
+                  <label for="story">Tell us your story:</label>
+                  
+                  <textarea id="story" name="story"
+                        rows="5" cols="33">
+                  Tell us something about you
+                  </textarea>
+            </div>
             <!-- Submit button -->
             <button id="submit">Submit</button>
       </form>

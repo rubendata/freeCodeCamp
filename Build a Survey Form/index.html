@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Survey Form</title>
+</head>
+<body>
+     <h1 id="title">Survey Form</h1>
+     <p id="description">this is a description</p>
+     <form>
+            <!--- dropdown field -->
+            <label for="enter-salutation" id="salutation-label">Title:</label>
+            <input name="enter-salutation" id="enter-salutation" list="salutations" type="dropdown" placeholder="choose your salutation" >
+                  <datalist id="salutations">
+                        <option value="Mr.">
+                        <option value="Mrs.">
+                        <option value="Ms.">
+                  </datalist>
+            <!--- text input field -->
+            <label for="enter-name" id="name-label">Your name:</label>
+            <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" >
+            <!--- email input field -->
+            <label for="enter-email" id="email-label">Your email:</label>
+            <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" >
+            <!--- number input field -->
+            <label for="enter-number" id="number-label">A number:</label>
+            <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Enter a number between 0 and 100" >
+            <!--- radio button -->
+            <p>Your age:</p>
+            <div>
+                  <input type="radio" id="18-25" name="age" value="18-25" checked>
+                  <label for="18-25">18-25</label>
+            </div>
+                
+            <div>
+                  <input type="radio" id="26-35" name="age" value="26-35">
+                  <label for="26-35">26-35</label>
+            </div>
+                
+            <div>
+                  <input type="radio" id="26-35" name="age" value="35-999">
+                  <label for="26-35">35+</label>
+            </div>
+            
+            <!-- checkbox -->
+            <p>What are your hobbies?</p>
+            <div>
+                  <input type="checkbox" name="hobby" id="hobby1">
+                  <label for="hobby1">Programming</label>
+            </div>
+
+            <div>
+                  <input type="checkbox" name="hobby" id="hobby2">
+                  <label for="hobby2">Video games</label>
+            </div>
+
+            <div>
+                  <input type="checkbox" name="hobby" id="hobby3">
+                  <label for="hobby3">Netflix</label>
+            </div>
+
+            <div>
+                  <input type="checkbox" name="hobby" id="hobby4">
+                  <label for="hobby4">Others</label>
+            </div>
+            <!-- text area -->
+            <label for="story">Tell us your story:</label>
+            
+            <textarea id="story" name="story"
+                  rows="5" cols="33">
+            Tell us something about you
+            </textarea>
+
+            <!-- Submit button -->
+            <button id="submit">Submit</button>
+      </form>
+     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</body>
+</html>

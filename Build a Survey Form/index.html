@@ -3,16 +3,18 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./style.css">
       <title>Survey Form</title>
 </head>
 <body>
+<div id="container">
      <h1 id="title">Survey Form</h1>
-     <p id="description">this is a description</p>
+     <p id="description">This is a survey about hobbies.</p>
      <form>
             <!--- dropdown field -->
-            <div>
-                  <label for="enter-salutation" id="salutation-label">Title:</label>
-                  <input name="enter-salutation" id="enter-salutation" list="salutations" type="dropdown" placeholder="choose your salutation" >
+            <div class="form">
+                  <label for="enter-salutation" id="salutation-label" class="description-form">Your title:</label>
+                  <input name="enter-salutation" id="enter-salutation" list="salutations" type="dropdown" placeholder="choose your salutation" class="field">
                         <datalist id="salutations">
                               <option value="Mr.">
                               <option value="Mrs.">
@@ -20,77 +22,83 @@
                         </datalist>
             </div>
             <!--- text input field -->
-            <div>
-                  <label for="enter-name" id="name-label">Your name:</label>
-                  <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" >
+            <div class="form">
+                  <label for="enter-name" id="name-label" class="description-form">Your name:</label>
+                  <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" class="field" required>
             </div>
             <!--- email input field -->
-            <div>
-                  <label for="enter-email" id="email-label">Your email:</label>
-                  <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" >
+            <div class="form">
+                  <label for="enter-email" id="email-label" class="description-form">Your email:</label>
+                  <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" class="field" required>
             </div>
             <!--- number input field -->
-            <div>
-                  <label for="enter-number" id="number-label">A number:</label>
-                  <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Enter a number between 0 and 100" >
+            <div class="form">
+                  <label for="enter-number" id="number-label" class="description-form">A number:</label>
+                  <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Between 0 and 100" class="field" required>
             </div>
             <!--- radio button -->
-            <p>Your age:</p>
-            <div>
-                  <input type="radio" id="18-25" name="age" value="18-25" checked>
-                  <label for="18-25">18-25</label>
+            <div  class="form" >
+                  <div id="radio">
+                        <p class="description-form">Your age:</p>
+                        <div class="radio">
+                              <input type="radio" id="18-25" name="age" value="18-25" checked>
+                              <label for="18-25">18-25</label>
+                        </div>
+                        
+                        <div class="radio">
+                              <input type="radio" id="26-35" name="age" value="26-35">
+                              <label for="26-35">26-35</label>
+                        </div>
+                        
+                        <div class="radio"> 
+                              <input type="radio" id="26-35" name="age" value="35-999">
+                              <label for="26-35">35+</label>
+                        </div>
+                  </div>
             </div>
-                
-            <div>
-                  <input type="radio" id="26-35" name="age" value="26-35">
-                  <label for="26-35">26-35</label>
-            </div>
-                
-            <div>
-                  <input type="radio" id="26-35" name="age" value="35-999">
-                  <label for="26-35">35+</label>
-            </div>
-            
             <!-- checkbox -->
-            <p>What are your hobbies?</p>
-            <div>
-                  <input type="checkbox" name="hobby" id="hobby1">
-                  <label for="hobby1">Programming</label>
-            </div>
+            <p class="description-form">What are your hobbies?</p>
+            <div  class="form" >
+                  <divid="checkbox">
+                        <div class="checkbox">
+                              <input type="checkbox" name="hobby" id="hobby1">
+                              <label for="hobby1">Programming</label>
+                        </div>
 
-            <div>
-                  <input type="checkbox" name="hobby" id="hobby2">
-                  <label for="hobby2">Video games</label>
-            </div>
+                        <div class="checkbox">
+                              <input type="checkbox" name="hobby" id="hobby2">
+                              <label for="hobby2">Video games</label>
+                        </div>
 
-            <div>
-                  <input type="checkbox" name="hobby" id="hobby3">
-                  <label for="hobby3">Netflix</label>
-            </div>
+                        <div class="checkbox">
+                              <input type="checkbox" name="hobby" id="hobby3">
+                              <label for="hobby3">Netflix</label>
+                        </div>
 
-            <div>
-                  <input type="checkbox" name="hobby" id="hobby4">
-                  <label for="hobby4">Others</label>
-            </div>
+                        <div class="checkbox">
+                              <input type="checkbox" name="hobby" id="hobby4">
+                              <label for="hobby4">Others</label>
+                        </div>
+                  </div>
+            
             <!-- text area -->
-            <div>
-                  <label for="story">Tell us your story:</label>
-                  
-                  <textarea id="story" name="story"
-                        rows="5" cols="33">
-                  Tell us something about you
-                  </textarea>
-            </div>
-            <!-- Submit button -->
-            <button id="submit">Submit</button>
+                  <div class="form">
+                        <label for="story" class="description-form">Tell us your story:</label>
+                        
+                        <textarea id="story" name="story" rows="5" cols="33" placeholder="I am a coding fnatic"></textarea>
+                  </div>
+                  <!-- Submit button -->
+                  <button id="submit">Submit</button>
 
             <!-- TO DO 
-            - require einbauen; für number und email
-            - prüfung einbauen; z.B. für number https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number Mitte der Seite (Validation)
-            - CSS
+            - den container vertikal centrieren
+            - submit button zentrieren und abstand
+            
             -->
+            </div>
 
       </form>
+</div>
      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
 </body>

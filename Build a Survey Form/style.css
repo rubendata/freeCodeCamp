@@ -24,7 +24,7 @@ h1{
       align-items: center;
       justify-content: center;
       background-color: white;
-      opacity: 0.9;
+      opacity: 0.95;
       width: 50vw;
       height: 100vh;
       overflow: hidden;
@@ -38,8 +38,9 @@ h1{
       
 }
 
-#checkbox{
-      align-items: flex-start;
+
+.checkbox:hover{
+      cursor: pointer;
 }
 
 
@@ -77,10 +78,21 @@ textarea {
       box-shadow: var(--box-shadows);
       font-size: var(--input-field-font-size);
       width: var(--input-field-with);
+      opacity: 1;
+      background-color: white;
       
 }
 
-
+#button{
+      display: flex;
+      justify-content: center;
+      margin-top: 5px;
+      opacity: 1;
+      
+}
+button:hover {
+cursor:pointer;
+}
 
 
 

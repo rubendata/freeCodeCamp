@@ -11,7 +11,7 @@
 <div id="container">
       <h1 id="title">Survey Form</h1>
       <p id="description">This is a survey about hobbies.</p>
-      <form>
+      <form id="survey-form">
                   <!--- dropdown field -->
                   <div class="form">
                         <label for="enter-salutation" id="salutation-label" class="description-form">Your title:</label>
@@ -22,20 +22,20 @@
                                     <option value="Ms.">
                               </datalist>
                   </div>
-                  <!--- text input field -->
+                  <!--- name (text) input field -->
                   <div class="form">
-                        <label for="enter-name" id="name-label" class="description-form">Your name:</label>
-                        <input name="enter-name" id="enter-name" type="text" placeholder="Enter your name" class="field" required>
+                        <label for="name" id="name-label" class="description-form">Your name:</label>
+                        <input name="name" id="name" type="text" placeholder="Enter your name" class="field" required>
                   </div>
                   <!--- email input field -->
                   <div class="form">
-                        <label for="enter-email" id="email-label" class="description-form">Your email:</label>
-                        <input name="enter-email" id="enter-email" type="email" placeholder="Enter your email" class="field" required>
+                        <label for="email" id="email-label" class="description-form">Your email:</label>
+                        <input name="email" id="email" type="email" placeholder="Enter your email" class="field" required>
                   </div>
                   <!--- number input field -->
                   <div class="form">
-                        <label for="enter-number" id="number-label" class="description-form">A number:</label>
-                        <input name="enter-number" id="enter-number" type="number" min="0" max="100" placeholder="Between 0 and 100" class="field" required>
+                        <label for="number" id="number-label" class="description-form">A number:</label>
+                        <input name="number" id="number" type="number" min="0" max="100" placeholder="Between 0 and 100" class="field" required>
                   </div>
                   <!--- radio button -->
                   <div  class="form" >
@@ -60,37 +60,49 @@
                   <!-- checkbox -->
                   <p class="description-form">What are your hobbies?</p>
                   <div  class="form" >
-                        <divid="checkbox">
-                              <div class="checkbox">
-                                    <input type="checkbox" name="hobby" id="hobby1">
+                        <div id="checkbox">
+                              <div>
+                                    <input type="checkbox" name="hobby" id="hobby1"  class="checkbox" value="programming">
                                     <label for="hobby1">Programming</label>
                               </div>
 
                               <div class="checkbox">
-                                    <input type="checkbox" name="hobby" id="hobby2">
+                                    <input type="checkbox" name="hobby" id="hobby2"  class="checkbox" value="video games">
                                     <label for="hobby2">Video games</label>
                               </div>
 
                               <div class="checkbox">
-                                    <input type="checkbox" name="hobby" id="hobby3">
+                                    <input type="checkbox" name="hobby" id="hobby3"  class="checkbox" value="Netflix">
                                     <label for="hobby3">Netflix</label>
                               </div>
 
                               <div class="checkbox">
-                                    <input type="checkbox" name="hobby" id="hobby4">
+                                    <input type="checkbox" name="hobby" id="hobby4"  class="checkbox" value="Others">
                                     <label for="hobby4">Others</label>
                               </div>
                         </div>
-                  
+                  <!-- dropdown -->
+                        <div class="form">
+                              <p class="description-form">What is your job?</p>
+                              <select name="dropdown" id="dropdown" required>
+                                    <option value="" selected> </option>
+                                    <option value="student">Student</option>
+                                    <option value="employee">Employee</option>
+                                    <option value="employer">Employer</option>
+                                    <option value="unemployed">unemployed</option>
+                              </select>
+                        </div>
+
                   <!-- text area -->
                         <div class="form">
                               <label for="story" class="description-form">Tell us your story:</label>
                               
-                              <textarea id="story" name="story" rows="3" cols="1" placeholder="I am a coding fnatic"></textarea>
+                              <textarea id="story" name="story" rows="3" cols="30" placeholder="I am a coding fnatic"></textarea>
                         </div>
                         <!-- Submit button -->
-                        
-                        <button id="submit">Submit</button>
+                        <div id="button">
+                              <button id="submit">Submit</button>
+                        </div>
                        
                   <!-- TO DO 
                   - den container vertikal centrieren
@@ -99,7 +111,7 @@
                   -->
                   </div>
 
-            </form>
+      </form>
 </div>
 
      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

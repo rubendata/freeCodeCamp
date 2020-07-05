@@ -1,21 +1,35 @@
-body {
-      background-image: url(https://zudocalendrio.com/wp-content/uploads/2020/03/cheap-and-fun-hobbies-4125444-Final.png);
-      font-size: 20px;
+:root{
+      --input-field-font-size: 18px;
+      --input-field-with: 18em;
+      --box-shadows: 1px 1px 1px #999;
+      --box-border: 1px solid #ccc;
 }
+
+body {
+      font-size: 20px;
+      background-image: url(https://zudocalendrio.com/wp-content/uploads/2020/03/cheap-and-fun-hobbies-4125444-Final.png);
+      padding: 0;
+      margin: 0;
+    }
 
 h1{
       padding: 0;
       margin: 0;
 }
 
+
 #container {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       background-color: white;
       opacity: 0.9;
-      width: 30%;
-      margin: auto;
+      width: 50vw;
+      height: 100vh;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 5px;
 }
 .form{
       display: flex;
@@ -39,8 +53,10 @@ input.field{
       padding: 0px;
       margin: 0px;
       border-radius: 5px;
-      border: 1px solid #ccc;
-      box-shadow: 1px 1px 1px #999;
+      border: var(--box-border);
+      box-shadow: var(--box-shadows);
+      width: var(--input-field-with);
+      font-size: var(--input-field-font-size);
       
 }
 p{
@@ -49,7 +65,7 @@ p{
 }
 
 #enter-number{
-      width: 12em;
+      width: var(--input-field-with);
       
 }
 
@@ -57,11 +73,49 @@ textarea {
       padding: 10px;
       line-height: 1.5;
       border-radius: 5px;
-      border: 1px solid #ccc;
-      box-shadow: 1px 1px 1px #999;
+      border: var(--box-border);
+      box-shadow: var(--box-shadows);
+      font-size: var(--input-field-font-size);
+      width: var(--input-field-with);
       
 }
 
-button {
+
+
+
+
+@media screen and (max-width: 1150px) {
+
+      :root{
+            --input-field-font-size: 18px;
+            --input-field-with: 16em;
+           
+      }
+
       
+      h1 {
+            font-size: 28px;
+      }
+      body{
+            font-size: 20px;
+      }
+     
 }
+
+@media screen and (max-width: 1000px) {
+
+      :root{
+            --input-field-font-size: 18px;
+            --input-field-with: 90%;
+            
+      }
+
+      h1 {
+            font-size: 26px;
+      }
+      body{
+            font-size: 18px;
+      }
+     
+}
+

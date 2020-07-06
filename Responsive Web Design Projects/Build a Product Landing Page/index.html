@@ -3,13 +3,15 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+      <title>Landing Page</title>
 </head>
 <body>
       <header id="header">
             <div>
                   <img src="" alt="company logo" id="header-img"> <!-- place company logo here -->
             </div>
+            <h1 id="title">Landing Page</h1>
             <nav id="nav-bar">
                   <!-- 
                   - at least 3 clickable elements, each with class "nav-link" 
@@ -22,8 +24,12 @@
                         <li class="nav-item">About</li>
                   </ul>
             </nav>
+            
       </header>
       <section id="poduct">
+            <div id="product-container">product
+                  
+            </div>
             <!--  I can watch an embedded product video with id="video". -->
       </section>
 
@@ -33,6 +39,15 @@
                   - submit button; is the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
             
             -->
+            <div>
+                  <label for="email">email</label>
+                  <input name="email" id="email" type="email" placeholder="itsme@mail.com" required>
+            </div>
+            <div>
+                  <button>
+                        Submit
+                  </button>
+            </div>
 
       </form>
 

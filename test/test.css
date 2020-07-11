@@ -4,7 +4,7 @@ body {
       display: grid;
       margin:0;
       padding:0;
-      overflow: hidden;
+      overflow: hidden; /*need this overflow hidden because if the menu slides in then during the animation there appears a scrollbar. außerdem würde ohne dieses hidden das menu nach rechts raus gehen und unten in der horizontalen würde ein scrollbar entstehen*/
       grid-template-columns: 100vw;
       grid-template-rows: 20vh 80vh;
       grid-template-areas: 
@@ -19,7 +19,6 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
         
       
 }
@@ -38,7 +37,6 @@ display: flex;
 justify-content: flex-start;
 align-items: center;
 
-
  
 }
 
@@ -47,7 +45,7 @@ align-items: center;
       width: 40%;
       float: right;
       display: flex;
-      flex-direction: column;
+      flex-direction: column; /*damit menu unter dem burger rein kommt*/
       align-items: flex-end;
       justify-content: flex-start;
      
@@ -57,7 +55,7 @@ align-items: center;
       grid-area: main;
       background-color: blue;
       padding: 20px;
-      overflow: hidden;
+      overflow: auto;
       
       
 }
@@ -82,7 +80,7 @@ align-items: center;
       display: block; /*ich brauche hier irgendwas anderes als none. daher block. könnte auch flex oder inline-block sein. hauptsache der kasten für label wird erzeugt.*/
       /*border: 3px solid olive;*/ /*only for dev purpose. ich habr hier zwar eine border, aber wenn display: none ist (oder nicht gesetzt), dann wird kein kasten gesetzt */
       float: right; /*VS code unterkringelt hier, weil floar und inline block nicht zusammen passen.  aber ich brauche inline-block damit menu-icon (das label) überhaupt eine box wirft, die geklickt werden kann. wenn es nicht gesetzt ist, dann ist nicht ein pointer über den drei strichen (weil ja keine box da ist). dadurch, dass die checkbox auch weg ist könnte man gar nichts anklicken*/
-      padding: 0px 20px;
+      padding: 0px 20px; /*padding oben 0 damit es bündig ist beim vertikalen centern der flexbox*/
 /*      position: relative;*/
       
       
@@ -158,7 +156,6 @@ align-items: center;
 
 
 .nav-element {
-      
       list-style: none;
       text-transform: uppercase;
       letter-spacing: 2px;
@@ -166,28 +163,21 @@ align-items: center;
       padding: 0px;
       background-color: lightgreen;
       text-align: center;
-      opacity: 0;
-      margin-left: 100%;
-      overflow: hidden;
-      
-      
-      
-      
+      opacity: 0; /*opacity starts with 0 for slide in effect*/
+      margin-left: 100%; /*place it out of viewport (and later slide in)*/
       
 }
 
 #header .menu-btn:checked ~ #menu .nav-element {
       position: relative;
       display: block;
-      opacity: 1;
+      opacity: 1; /*for slide in effect. goes from 0 to 1*/
       margin-left:0 ;
       width: 200px;
-      overflow: auto;
       padding: 20px;
-     transition:  margin-left 0.2s ease, visibility 5s, opacity 0.3s linear;
+      transition:  margin-left 0.2s ease, visibility 5s, opacity 0.3s linear;
       
 }
-
 
 
 .nav-element > a:link, 

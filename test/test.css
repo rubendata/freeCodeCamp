@@ -1,0 +1,129 @@
+body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: grid;
+      grid-template-columns: 90vw;
+      grid-template-rows: 20vh 80vh;
+      grid-template-areas: 
+      "hd"
+      "main";
+}
+
+#header {
+      grid-area: hd;
+      background-color: tomato;
+      min-height: 100%;
+      
+      
+}
+
+#main {
+      grid-area: main;
+      background-color: blue;
+}
+
+.line {
+      border-bottom: 3px solid black;
+      padding: 0px;
+      width: 30px;
+      height: 3px;
+      display: block;
+}
+
+
+
+#header .menu-btn{ /*ist einfach nur da, damit man den zustand :checked verwenden kann und wird ausgeblendet, weil man es nicht zeigen muss*/
+      display: none; /*damit der button nicht da ist und keinen Kasten wirft*/
+      
+}
+
+#header .menu-icon {
+      cursor: pointer;
+      display: block; /*ich brauche hier irgendwas anderes als none. daher block. könnte auch flex oder inline-block sein. hauptsache der kasten für label wird erzeugt.*/
+      border: 3px solid olive; /*only for dev purpose. ich habr hier zwar eine border, aber wenn display: none ist (oder nicht gesetzt), dann wird kein kasten gesetzt */
+      float: right; /*VS code unterkringelt hier, weil floar und inline block nicht zusammen passen.  aber ich brauche inline-block damit menu-icon (das label) überhaupt eine box wirft, die geklickt werden kann. wenn es nicht gesetzt ist, dann ist nicht ein pointer über den drei strichen (weil ja keine box da ist). dadurch, dass die checkbox auch weg ist könnte man gar nichts anklicken*/
+      padding: 28px 20px;
+      position: relative;
+      
+      
+}
+
+
+#header .menu-icon .navicon { /*middle line*/
+      background: #333;
+      display: block;
+      height: 3px;
+      position: relative;
+      width: 18px;
+      transition: .2s ease;
+      
+    }
+
+#header .menu-icon .navicon:after { /*oberer strich*/
+      background:  #333;
+      display: block;
+      content:"";
+      height: 3px;
+      position: absolute; 
+      width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
+      top: -5px;
+      transition: .2s ease;
+      
+}
+
+#header .menu-icon .navicon:before { /*unterer strich*/
+      background:  #333;
+      display: block;
+      content:"";
+      height: 3px;
+      position: absolute;
+      width: 100%;
+      top: 5px;
+      transition: .2s ease;
+      
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon{ /*wenn btn checked dann wird der sibling angesprochen*/
+      background: transparent;
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon::before{ /*wenn btn checked dann wird der sibling angesprochen*/
+      transform: rotate(-45deg);
+}
+#header .menu-btn:checked ~ .menu-icon .navicon::after{ /*wenn btn checked dann wird der sibling angesprochen*/
+      transform: rotate(45deg);
+}
+
+#header .menu-btn:checked ~ .menu-icon .navicon,
+#header .menu-btn:checked ~ .menu-icon .navicon:before,
+#header .menu-btn:checked ~ .menu-icon .navicon:after {
+    top: 0;
+    
+  }
+
+#menu{
+      margin: 0;
+      background-color: lightcyan;
+}
+
+
+.nav-element {
+      list-style: none;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 5px;
+      width: 200px;
+      background-color: lightgreen;
+      
+}
+
+
+
+.nav-element > a:link, 
+.nav-element > a:visited {
+      text-decoration: none;
+      
+}
+.nav-element:hover {
+      background-color: lightblue;
+      border: black solid 1px;
+}

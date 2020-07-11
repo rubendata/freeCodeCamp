@@ -2,22 +2,22 @@ body{
       grid-template-columns: 30vw 40vw 20vw;
       grid-template-rows: 20vh 70vh 10vh;
       grid-template-areas: 
-      "logo" "title" "nav"
-      "main" "main" "main"
-      "footer" "footer" "footer";
+      "header header header"
+      "main main main"
+      "footer footer footer";
 }
 
 #header{
-      grid-area: "logo" "title" "nav";
+      grid-area: header;
       display: flex;
       flex-direction: row;
-      justify-content: space-evenly;
+      
       align-items: center;
       background-color: orchid;
 }
 
 #title{
-      grid-area: "title";
+      
       text-align: center;
 }
 /*ul > li{
@@ -28,11 +28,19 @@ body{
 }*/
 
 #header-img{
-      grid-area: "logo";
+      
+}
+#nav-bar{
+      
+      background-color: thistle;
+      display: flex;
+      justify-content: space-evenly;
+      justify-self: stretch;
+      width: 30%;
 }
 
 #nav-list{
-      grid-area: "nav";
+      
 }
 .nav-item{
       list-style-type: none;
@@ -49,7 +57,7 @@ body{
 }
 
 #product-container{
-      grid-area: "main";
+      grid-area: main;
       background-color: teal;
       height: 200px;
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="test.css">
+      <title>Landing Page</title>
+</head>
+<body>
+      <header id="header">
+            
+            <span class ="line" id="line1"></span>
+            <span class ="line" id="line2"></span>
+            <span class ="line" id="line3"></span>
+
+            <input class="menu-btn" type="checkbox" id="menu-btn" />
+            <label class="menu-icon" for="menu-btn">
+                  <span class="navicon"></span> <!-- mit dem checked button kann ich :checked verwenden.  Das label kann genauso angeklickt werden und setzt den :checked status, wie die checkbox. Da wir diese verstecken brauchen wir das label um zu checken. Daher malen wir die spans in das label um bei klick auf die spans :checked zu setzen-->
+            </label>
+            
+      </header>
+      <main id="main"><ul id="menu">
+            <li class="nav-element"><a href="#about">home</a></li>
+            <li class="nav-element"><a href="#shop">shop</a></li>
+            <li class="nav-element"><a href="#about">about</a></li>
+      </ul>
+      </main>
+</body>
+</html>

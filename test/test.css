@@ -1,3 +1,10 @@
+:root{
+      --primary: #4484CE;
+      --secondary: #F9CF00;
+      --tertiary:#D9D9D9;
+      --fourth: #F19F4d;
+}
+
 body {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 21px;
@@ -15,27 +22,30 @@ body {
 #header {
 
       grid-area: hd;
-      background-color: tomato;
+      background-color: var(--primary);
       display: flex;
       justify-content: space-between;
       align-items: center;
-        
+      
+      
+      
       
 }
 
 
-
-
 #logo {
 
-padding-left: 20px;   
+
 text-transform: uppercase;
 float: left;
-height: 0%;
 width: 40%;
 display: flex;
 justify-content: flex-start;
 align-items: center;
+color: var(--secondary);
+font-weight: bold;
+letter-spacing: 2pt;
+padding-left: 20px;
 
  
 }
@@ -53,7 +63,7 @@ align-items: center;
 
 #main {
       grid-area: main;
-      background-color: blue;
+      background-color: var(--tertiary);
       padding: 20px;
       overflow: auto;
       
@@ -84,40 +94,50 @@ align-items: center;
 /*      position: relative;*/
       
       
+      
 }
 
 
+
 #header .menu-icon .navicon { /*middle line*/
-      background: #333;
+      background: #F9CF00;
       display: block;
-      height: 3px;
+      height: 2.5px;
       position: relative;
+      
       width: 18px;
-      transition: background .2s ease-out;
+      transition: background .0s ease-out;
+      
+      
       
     }
 
 #header .menu-icon .navicon:after { /*oberer strich*/
-      background:  #333;
+      background:  #F9CF00;
       display: block;
       content:"";
-      height: 3px;
+      height: 2.5px;
       position: absolute; 
       width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
-      top: -5px;
+      top: -7px;
       transition: all .2s ease;
+    
+      
       
 }
 
 #header .menu-icon .navicon:before { /*unterer strich*/
-      background:  #333;
+      background: #F9CF00;
       display: block;
       content:"";
-      height: 3px;
+      height: 2.5px;
       position: absolute;
       width: 100%;
-      top: 5px;
+      top: 7px;
       transition: all .2s ease;
+      
+      
+      
       
       
 }
@@ -161,7 +181,7 @@ align-items: center;
       letter-spacing: 2px;
       width: 0px;
       padding: 0px;
-      background-color: lightgreen;
+      background-color: var(--secondary);
       text-align: center;
       opacity: 0; /*opacity starts with 0 for slide in effect*/
       margin-left: 100%; /*place it out of viewport (and later slide in)*/
@@ -186,7 +206,11 @@ align-items: center;
       
 }
 .nav-element:hover {
-      background-color: lightblue;
-      border: black solid 1px;
+      background-color: var(--tertiary);
+      border: var(--secondary) solid 1px;
 }
 
+/*todo
+den raum zwischen den burger strichen klickbar
+shadow unterm header
+*/

@@ -67,7 +67,7 @@ body {
 #header .menu-icon .navicon { /*middle line*/
       background: #F9CF00;
       display: block;
-      height: 2.5px;
+      height: 3px;
       position: relative;
       border-top: solid 4px var(--primary);
       border-bottom: solid 4px var(--primary);
@@ -80,7 +80,7 @@ body {
       background:  #F9CF00;
       display: block;
       content:"";
-      height: 2.5px;
+      height: 3px;
       position: absolute; 
       width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
       top: -7px;
@@ -92,7 +92,7 @@ body {
       background: #F9CF00;
       display: block;
       content:"";
-      height: 2.5px;
+      height: 3px;
       position: absolute;
       width: 100%;
       top: 7px;
@@ -127,8 +127,7 @@ body {
       max-height: 0;
       position: absolute;
       top: 60px
-    
-            
+             
 }
 
 
@@ -157,7 +156,6 @@ body {
       
 }
 
-
 .nav-element > a:link, 
 .nav-element > a:visited {
       text-decoration: none;
@@ -174,11 +172,4 @@ body {
       padding: 20px;
       overflow: auto;
       
-      
 }
-
-
-/*todo
-den raum zwischen den burger strichen klickbar
-
-*/

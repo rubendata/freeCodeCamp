@@ -23,15 +23,13 @@ body {
 }
 
 #header {
-      
       grid-area: hd;
       background-color: var(--primary);
       border-bottom: solid 3px var(--secondary);
       display: flex;
       justify-content: space-between;
       align-items: center;
-       
-      
+          
 }
 
 
@@ -41,7 +39,6 @@ body {
       font-weight: bold;
       letter-spacing: 2pt;
       padding-left: 20px;
-      
 }
 
 #burger{
@@ -51,24 +48,20 @@ body {
       flex-direction: column; /*damit menu unter dem burger rein kommt*/
       align-items: center;
       justify-content: center;
-      border: green dotted;
-      
-      
+    
 }
 
 
 
 #header .menu-btn{ /*ist einfach nur da, damit man den zustand :checked verwenden kann und wird ausgeblendet, weil man es nicht zeigen muss*/
       display: none; /*damit der button nicht da ist und keinen Kasten wirft*/
-      
+     
 }
 
 #header .menu-icon {
       cursor: pointer;
-      border: red dotted;
      
 }
-
 
 
 #header .menu-icon .navicon { /*middle line*/
@@ -80,8 +73,7 @@ body {
       border-bottom: solid 4px var(--primary);
       width: 18px;
       transition: background .2s ease-out;
-      
-      
+       
 }
 
 #header .menu-icon .navicon:after { /*oberer strich*/
@@ -93,8 +85,7 @@ body {
       width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
       top: -7px;
       transition: all .2s ease;
-      
-      
+       
 }
 
 #header .menu-icon .navicon:before { /*unterer strich*/
@@ -106,7 +97,6 @@ body {
       width: 100%;
       top: 7px;
       transition: all .2s ease;
-      
       
 }
 
@@ -122,7 +112,6 @@ body {
 #header .menu-btn:checked ~ .menu-icon .navicon::after{ /*wenn btn checked dann wird der sibling angesprochen*/
       transform: rotate(45deg);
       
-      
 }
 
 #header .menu-btn:checked ~ .menu-icon .navicon,
@@ -133,11 +122,11 @@ body {
 }
 
 
-
 #menu{
       background-color: lightcyan;
       max-height: 0;
-      position: relative;
+      position: absolute;
+      top: 60px
     
             
 }

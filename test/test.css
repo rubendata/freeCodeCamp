@@ -46,8 +46,8 @@ body {
       width: 20%;
       display: flex;
       flex-direction: column; /*damit menu unter dem burger rein kommt*/
-      align-items: center;
-      justify-content: center;
+      align-items: flex-end;
+      justify-content: flex-end;
     
 }
 
@@ -60,7 +60,7 @@ body {
 
 #header .menu-icon {
       cursor: pointer;
-     
+     padding-right: 20px;
 }
 
 
@@ -126,7 +126,7 @@ body {
       background-color: lightcyan;
       max-height: 0;
       position: absolute;
-      top: 60px
+      margin-top: 15px;
              
 }
 
@@ -140,15 +140,13 @@ body {
       opacity: 0; /*opacity starts with 0 for slide in effect*/
       margin-left: 100%; /*place it out of viewport (and later slide in)*/
       width: 200px;
-      margin-right: 100px;
-
+     
 }
 
 
 #header .menu-btn:checked ~ #menu .nav-element {
       position: relative;
       display: block;
-      
       opacity: 1; /*for slide in effect. goes from 0 to 1*/
       margin-left:0 ;
       padding: 20px;

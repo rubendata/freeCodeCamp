@@ -5,12 +5,15 @@
       --fourth: #F19F4d;
 }
 
+*{
+      margin:0;
+      padding:0;  
+}
+
 body {
       font-family: Arial, Helvetica, sans-serif;
       font-size: 21px;
       display: grid;
-      margin:0;
-      padding:0;
       overflow: hidden; /*need this overflow hidden because if the menu slides in then during the animation there appears a scrollbar. außerdem würde ohne dieses hidden das menu nach rechts raus gehen und unten in der horizontalen würde ein scrollbar entstehen*/
       grid-template-columns: 100vw;
       grid-template-rows: 20vh 80vh;
@@ -20,66 +23,38 @@ body {
 }
 
 #header {
-
+      
       grid-area: hd;
       background-color: var(--primary);
       border-bottom: solid 3px var(--secondary);
-      
-      
       display: flex;
       justify-content: space-between;
       align-items: center;
-      
-      
-      
+       
       
 }
 
 
 #logo {
-
-
-text-transform: uppercase;
-float: left;
-width: 40%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-color: var(--secondary);
-font-weight: bold;
-letter-spacing: 2pt;
-padding-left: 20px;
-
- 
+      text-transform: uppercase;
+      color: var(--secondary);
+      font-weight: bold;
+      letter-spacing: 2pt;
+      padding-left: 20px;
+      
 }
 
 #burger{
-      height: 0%;
-      width: 40%;
-      float: right;
+      
+      width: 20%;
       display: flex;
       flex-direction: column; /*damit menu unter dem burger rein kommt*/
-      align-items: flex-end;
-      justify-content: flex-start;
-     
-}
-
-#main {
-      grid-area: main;
-      background-color: var(--tertiary);
-      padding: 20px;
-      overflow: auto;
+      align-items: center;
+      justify-content: center;
+      border: green dotted;
       
       
 }
-/* draw lines manually
-.line {
-      border-bottom: 3px solid black;
-      padding: 0px;
-      width: 30px;
-      height: 3px;
-      display: block;
-}*/
 
 
 
@@ -90,14 +65,8 @@ padding-left: 20px;
 
 #header .menu-icon {
       cursor: pointer;
-      display: block; /*ich brauche hier irgendwas anderes als none. daher block. könnte auch flex oder inline-block sein. hauptsache der kasten für label wird erzeugt.*/
-      /*border: 3px solid olive;*/ /*only for dev purpose. ich habr hier zwar eine border, aber wenn display: none ist (oder nicht gesetzt), dann wird kein kasten gesetzt */
-      float: right; /*VS code unterkringelt hier, weil floar und inline block nicht zusammen passen.  aber ich brauche inline-block damit menu-icon (das label) überhaupt eine box wirft, die geklickt werden kann. wenn es nicht gesetzt ist, dann ist nicht ein pointer über den drei strichen (weil ja keine box da ist). dadurch, dass die checkbox auch weg ist könnte man gar nichts anklicken*/
-      padding: 0px 20px; /*padding oben 0 damit es bündig ist beim vertikalen centern der flexbox*/
-/*      position: relative;*/
-      
-      
-      
+      border: red dotted;
+     
 }
 
 
@@ -113,9 +82,7 @@ padding-left: 20px;
       transition: background .2s ease-out;
       
       
-      
-      
-    }
+}
 
 #header .menu-icon .navicon:after { /*oberer strich*/
       background:  #F9CF00;
@@ -146,8 +113,6 @@ padding-left: 20px;
 #header .menu-btn:checked ~ .menu-icon .navicon{ /*wenn btn checked dann wird der sibling angesprochen*/
       background: transparent;
       
-      
-      
 }
 
 #header .menu-btn:checked ~ .menu-icon .navicon::before{ /*wenn btn checked dann wird der sibling angesprochen*/
@@ -157,25 +122,24 @@ padding-left: 20px;
 #header .menu-btn:checked ~ .menu-icon .navicon::after{ /*wenn btn checked dann wird der sibling angesprochen*/
       transform: rotate(45deg);
       
+      
 }
 
 #header .menu-btn:checked ~ .menu-icon .navicon,
 #header .menu-btn:checked ~ .menu-icon .navicon:before,
 #header .menu-btn:checked ~ .menu-icon .navicon:after {
-    top: 0;
-    
-  }
+      top: 0;
+      
+}
 
- 
+
 
 #menu{
-      margin-top: 20px;
       background-color: lightcyan;
       max-height: 0;
-      float: right;
-      clear:both;
       position: relative;
-       
+    
+            
 }
 
 
@@ -183,21 +147,22 @@ padding-left: 20px;
       list-style: none;
       text-transform: uppercase;
       letter-spacing: 2px;
-      width: 0px;
-      padding: 0px;
       background-color: var(--secondary);
       text-align: center;
       opacity: 0; /*opacity starts with 0 for slide in effect*/
       margin-left: 100%; /*place it out of viewport (and later slide in)*/
-      
+      width: 200px;
+      margin-right: 100px;
+
 }
+
 
 #header .menu-btn:checked ~ #menu .nav-element {
       position: relative;
       display: block;
+      
       opacity: 1; /*for slide in effect. goes from 0 to 1*/
       margin-left:0 ;
-      width: 200px;
       padding: 20px;
       transition:  margin-left 0.2s ease, visibility 5s, opacity 0.3s linear;
       
@@ -213,6 +178,16 @@ padding-left: 20px;
       background-color: var(--tertiary);
       border: var(--secondary) solid 1px;
 }
+
+#main {
+      grid-area: main;
+      background-color: var(--tertiary);
+      padding: 20px;
+      overflow: auto;
+      
+      
+}
+
 
 /*todo
 den raum zwischen den burger strichen klickbar

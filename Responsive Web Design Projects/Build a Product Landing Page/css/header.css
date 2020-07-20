@@ -1,0 +1,170 @@
+#header {
+      grid-area: hd;
+      background-color: var(--primary);
+      border-bottom: solid 3px var(--secondary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+          
+}
+
+#title{
+      font-size: 2em;
+      text-align: center;
+      color: var(--secondary);
+      width: 50%;
+      
+      
+      
+}
+
+#header-img {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      
+      
+}
+#header-img img {
+      max-width: 100%;
+      max-height: 90%;
+      object-fit: contain;
+}
+
+
+#nav-bar{
+      height: 100%;
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    
+}
+
+
+.menu-btn{ /*ist einfach nur da, damit man den zustand :checked verwenden kann und wird ausgeblendet, weil man es nicht zeigen muss*/
+      display: none; /*damit der button nicht da ist und keinen Kasten wirft*/
+     
+}
+
+.menu-icon {
+      cursor: pointer;
+     padding-right: 20px;
+     
+}
+
+
+.navicon { /*middle line*/
+      background: var(--secondary);
+      display: block;
+      height: 3px;
+      position: relative;
+      border-top: solid 4px var(--primary);
+      border-bottom: solid 4px var(--primary);
+      width: 18px;
+      transition: background .2s ease-out;
+       
+}
+
+.navicon:after { /*oberer strich*/
+      background: var(--secondary);
+      display: block;
+      content:"";
+      height: 3px;
+      position: absolute; 
+      width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
+      top: -7px;
+      transition: all .2s ease;
+       
+}
+
+.navicon:before { /*unterer strich*/
+      background: var(--secondary);
+      display: block;
+      content:"";
+      height: 3px;
+      position: absolute;
+      width: 100%;
+      top: 7px;
+      transition: all .2s ease;
+      
+}
+
+.menu-btn:checked ~ .menu-icon .navicon{ /*wenn btn checked dann wird der sibling angesprochen*/
+      background: transparent;
+      
+}
+
+.menu-btn:checked ~ .menu-icon .navicon::before{ /*wenn btn checked dann wird der sibling angesprochen*/
+      transform: rotate(-45deg);
+      
+}
+.menu-btn:checked ~ .menu-icon .navicon::after{ /*wenn btn checked dann wird der sibling angesprochen*/
+      transform: rotate(45deg);
+      
+}
+
+.menu-btn:checked ~ .menu-icon .navicon,
+.menu-btn:checked ~ .menu-icon .navicon:before,
+.menu-btn:checked ~ .menu-icon .navicon:after {
+      top: 0;
+      
+}
+
+
+#menu{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: absolute;
+      top: 65px;
+      border: rgb(0, 187, 240, 0) solid;
+      margin-left: 100%; /*place it out of viewport (and later slide in)*/
+      
+             
+}
+
+
+.nav-link {
+      list-style: none;
+      
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-color: var(--primary);
+      text-align: center;
+      opacity: 0; /*opacity starts with 0 for slide in effect*/
+      display: block;
+      width: 100%;
+     
+}
+
+
+.menu-btn:checked ~ #menu .nav-link {
+      display: block;
+      opacity: 1; /*for slide in effect. goes from 0 to 1*/
+      padding: 20px 0 20px 0;
+      transition:  opacity 0.0s linear;
+      
+}
+
+.menu-btn:checked ~ #menu {
+      border: solid rgb(0, 187, 240, 1);
+      transition: margin-left 1s ease, border 2s ease, opacity 0s linear;
+      margin-left: -1px ;
+      
+}
+
+.nav-link > a:link, 
+.nav-link > a:visited {
+      text-decoration: none;
+      
+}
+.nav-link:hover {
+      background-color: var(--tertiary);
+      border: var(--secondary) solid 1px;
+}

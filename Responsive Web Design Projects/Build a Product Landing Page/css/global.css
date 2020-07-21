@@ -1,4 +1,6 @@
 @import "header.css";
+@import "product.css";
+@import "contact.css";
 
 :root{
       --primary: white;
@@ -23,6 +25,7 @@ body {
       grid-template-areas: 
       "hd"
       "main";
+      
 }
 
 
@@ -31,4 +34,37 @@ body {
 
 main {
       overflow: auto;
+      padding: 20px;
+      
 }
+
+p, form, button, input, label {
+      font-size: 1.8em;
+      
+}
+
+p {
+      padding: 10px
+}
+
+button, input {
+      padding: 5px;
+}
+
+button:hover {
+      cursor: pointer;
+}
+
+h1 {
+      font-size: 2.1em;
+}
+
+h2 {
+      font-size: 2.0em;
+}
+
+h3 {
+      font-size: 1.9em;
+}
+
+

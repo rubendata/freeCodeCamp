@@ -3,7 +3,7 @@
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./css/main.css">
+      <link rel="stylesheet" href="./css/global.css">
       <title>Landing Page</title>
 </head>
 <body>
@@ -19,38 +19,49 @@
                         <span class="navicon"></span> <!-- mit dem checked button kann ich :checked verwenden.  Das label kann genauso angeklickt werden und setzt den :checked status, wie die checkbox. Da wir diese verstecken brauchen wir das label um zu checken. Daher malen wir die spans in das label um bei klick auf die spans :checked zu setzen-->
                   </label>
                   <ul id="menu">
-                        <li class="nav-link"><a href="#home">home</a></li>
-                        <li class="nav-link"><a href="#shop">shop</a></li>
-                        <li class="nav-link"><a href="#about">about</a></li>
+                        <li class="nav-link"><a href="">home</a></li>
+                        <li class="nav-link"><a href="#product">product</a></li>
+                        <li class="nav-link"><a href="#contact">contact</a></li>
                   </ul>
             </nav>
             
       </header>
 <main>
-      <section id="poduct">
-            <div id="product-container">product
+      <section id="product">
+            
+                  <h2>Our cool new product</h2>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae blanditiis quo minus nam corrupti necessitatibus reprehenderit officiis! Soluta recusandae optio incidunt minima dolore vero ipsa accusamus, adipisci nobis dignissimos provident.</p>
+                  <video controls width="400"> 
+                        <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+                        <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+                        <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                        <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+                      </video>
 
-            </div>
-            <!--  I can watch an embedded product video with id="video". -->
+                  <iframe width="400" height="200" src="https://www.youtube.com/embed/81wHqxnWeHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+            
       </section>
 
+      <section id="contact">
       <form id="form">
             <!-- 
                   - input field with id="email", placeholder text, validation 
                   - submit button; is the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
             
             -->
-            <div>
+            <div id="email">
                   <label for="email">email</label>
                   <input name="email" id="email" type="email" placeholder="itsme@mail.com" required>
             </div>
-            <div>
+            <div id="button">
                   <button>
                         Submit
                   </button>
             </div>
 
       </form>
+      </section>
 
       <!-- other requirements:
             - My product landing page should have at least one media query.

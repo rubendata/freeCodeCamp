@@ -13,10 +13,10 @@
       font-size: 2em;
       text-align: center;
       color: var(--secondary);
-      width: 50%;
-      
-      
-      
+      width: 40%;
+      font-weight: 500;
+      /*color: var(--primary);*/
+       
 }
 
 #header-img {
@@ -31,7 +31,7 @@
 }
 #header-img img {
       max-width: 100%;
-      max-height: 60%;
+      max-height: 90%;
       object-fit: contain;
 }
 
@@ -63,11 +63,11 @@
 .navicon { /*middle line*/
       background: var(--secondary);
       display: block;
-      height: 3px;
+      height: 0.3em;
       position: relative;
       border-top: solid 4px var(--primary);
       border-bottom: solid 4px var(--primary);
-      width: 18px;
+      width: 20px;
       transition: background .2s ease-out;
        
 }
@@ -76,7 +76,7 @@
       background: var(--secondary);
       display: block;
       content:"";
-      height: 3px;
+      height: 0.3em;
       position: absolute; 
       width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
       top: -7px;
@@ -88,7 +88,7 @@
       background: var(--secondary);
       display: block;
       content:"";
-      height: 3px;
+      height: 0.3em;
       position: absolute;
       width: 100%;
       top: 7px;
@@ -119,12 +119,12 @@
 
 
 #menu{
-      width: 100%;
+      width: 200px;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       position: absolute;
-      top: 65px;
+      top: 95px;
       border: rgb(0, 187, 240, 0) solid;
       margin-left: 100%; /*place it out of viewport (and later slide in)*/
       
@@ -170,3 +170,4 @@
       background-color: var(--tertiary);
       border: var(--secondary) solid 1px;
 }
+

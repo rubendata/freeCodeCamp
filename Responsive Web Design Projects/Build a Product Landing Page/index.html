@@ -7,12 +7,12 @@
       <title>Landing Page</title>
 </head>
 <body>
-
+      
       <header id="header">
             <div id="header-img">
                   <img src="./img/logo.png" alt="&lt; / &gt;" > <!-- place company logo here -->
             </div>
-            <h1 id="title">CODING FOR EVERYONE</h1>
+            <h1 id="title">placeholder</h1>
             <nav id="nav-bar">
                   <input class="menu-btn" type="checkbox" id="menu-btn" />
                   <label class="menu-icon" for="menu-btn">
@@ -26,47 +26,53 @@
             </nav>
             
       </header>
-<main>
-      <section id="product">
-            
+      <main>
+            <section id="product">
+               
                   <h2>Our cool new product</h2>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae blanditiis quo minus nam corrupti necessitatibus reprehenderit officiis! Soluta recusandae optio incidunt minima dolore vero ipsa accusamus, adipisci nobis dignissimos provident.</p>
-                  <video controls width="400"> 
-                        <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
-                        <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
-                        <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
-                        <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
-                      </video>
-
-                  <iframe width="400" height="200" src="https://www.youtube.com/embed/81wHqxnWeHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="video"> 
+                        <h3>Product 1</h3>
+                        <video controls  width="90%"> 
+                              <source src=http://techslides.com/demos/sample-videos/small.webm type=video/webm> 
+                              <source src=http://techslides.com/demos/sample-videos/small.ogv type=video/ogg> 
+                              <source src=http://techslides.com/demos/sample-videos/small.mp4 type=video/mp4>
+                              <source src=http://techslides.com/demos/sample-videos/small.3gp type=video/3gp>
+                        </video>
+                  </div>
+                  <div class="video"> 
+                        <h3>Product 2</h3>
+                        <div class="resp-container">
+                              <iframe class="resp-iframe" src="https://www.youtube.com/embed/81wHqxnWeHQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                  </div>
+                  
+            </section>
+                                    
+            <section id="contact">
+                  <form id="form">
+                        <!-- 
+                              - input field with id="email", placeholder text, validation 
+                              - submit button; is the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
+                              
+                        -->
+                        <div id="email">
+                              <label for="email">email</label>
+                              <input name="email" id="email" type="email" placeholder="itsme@mail.com" required>
+                        </div>
+                        <div id="button">
+                              <button>
+                                    Submit
+                              </button>
+                        </div>
+                        
+                  </form>
+            </section>
             
-            
-      </section>
-
-      <section id="contact">
-      <form id="form">
-            <!-- 
-                  - input field with id="email", placeholder text, validation 
-                  - submit button; is the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit).
-            
+            <!-- other requirements:
+                  - My product landing page should have at least one media query.
+                  - My product landing page should utilize CSS flexbox at least once.
             -->
-            <div id="email">
-                  <label for="email">email</label>
-                  <input name="email" id="email" type="email" placeholder="itsme@mail.com" required>
-            </div>
-            <div id="button">
-                  <button>
-                        Submit
-                  </button>
-            </div>
-
-      </form>
-      </section>
-
-      <!-- other requirements:
-            - My product landing page should have at least one media query.
-            - My product landing page should utilize CSS flexbox at least once.
-      -->
-</main>
+      </main>
 </body>
 </html>

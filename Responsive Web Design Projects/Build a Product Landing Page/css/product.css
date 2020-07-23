@@ -1,17 +1,53 @@
+
 section#product {
-      min-height: 50px;
-      background: rgb(9,73,121);
-background: radial-gradient(circle, rgba(9,73,121,1) 0%, rgba(130,162,187,1) 49%, rgba(9,73,121,1) 100%);
+      
+      background-color: var(--primary);
+      padding: 20px;
       grid-area: "main";
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 50px;
+      
 }
 
 section#product video, section#product iframe{
-      padding: 20px;
+      
       cursor: pointer;
+      box-shadow: 4px 4px 10px 0px rgba(0,0,0,0.75);
+      
+      
+}
 
+.video {
+      margin-top: 20px;
+      width: 80%;      
+}
+
+.video video {
+      width: 95%;      
+      height: 95%;
+      
+}
+
+
+.video h3{
+      color: var(--secondary);
+}
+
+
+.resp-container {
+      position: relative;
+      padding-top: 56.25%;
+      
+      
+}
+
+.resp-iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 95%;
+      height: 95%;
+      
 }

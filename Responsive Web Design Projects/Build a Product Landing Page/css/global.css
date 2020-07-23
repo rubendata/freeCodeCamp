@@ -4,9 +4,9 @@
 
 :root{
       --primary: white;
-      --secondary: #005792;
+      --secondary: #02AAC1;
       --tertiary: #617CFF;
-      --fourth: rgb(0, 187, 240);
+      
 }
 
 *{
@@ -21,7 +21,7 @@ body {
       display: grid;
       overflow: hidden; /*need this overflow hidden because if the menu slides in then during the animation there appears a scrollbar. außerdem würde ohne dieses hidden das menu nach rechts raus gehen und unten in der horizontalen würde ein scrollbar entstehen*/
       grid-template-columns: 100vw;
-      grid-template-rows: 15vh 80vh;
+      grid-template-rows: 20vh 80vh;
       grid-template-areas: 
       "hd"
       "main";
@@ -34,7 +34,6 @@ body {
 
 main {
       overflow: auto;
-      padding: 20px;
       
 }
 

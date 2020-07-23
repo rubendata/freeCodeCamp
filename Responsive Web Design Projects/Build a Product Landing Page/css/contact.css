@@ -1,8 +1,7 @@
 
 section#contact{
       padding: 20px 0 20px 0;
-      background: rgb(9,73,121);
-      background: radial-gradient(circle, rgba(9,73,121,1) 0%, rgba(130,162,187,1) 50%, rgba(9,73,121,1) 100%);
+      
 }
 #email {
       margin: auto;
@@ -20,4 +19,6 @@ section#contact{
       text-align: center;
       padding: 10px 0 0 0;
 }
+
+
 

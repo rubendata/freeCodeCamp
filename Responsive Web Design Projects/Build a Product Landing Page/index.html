@@ -12,8 +12,9 @@
             <div id="header-img">
                   <img src="./img/logo.png" alt="&lt; / &gt;" > <!-- place company logo here -->
             </div>
-            <h1 id="title">placeholder</h1>
-            <nav id="nav-bar">
+            
+            <!-- burger menu for small devices-->
+            <nav id="nav-bar"> 
                   <input class="menu-btn" type="checkbox" id="menu-btn" />
                   <label class="menu-icon" for="menu-btn">
                         <span class="navicon"></span> <!-- mit dem checked button kann ich :checked verwenden.  Das label kann genauso angeklickt werden und setzt den :checked status, wie die checkbox. Da wir diese verstecken brauchen wir das label um zu checken. Daher malen wir die spans in das label um bei klick auf die spans :checked zu setzen-->
@@ -24,9 +25,19 @@
                         <li class="nav-link"><a href="#contact">contact</a></li>
                   </ul>
             </nav>
+
+            <!-- nav for normal devices -->
+            <nav id="nav-bar-normal"> 
+                  <ul>
+                        <li><a href="">home</a></li>
+                        <li><a href="#product">product</a></li>
+                        <li><a href="#contact">contact</a></li>
+                  </ul>
+            </nav>
             
       </header>
       <main>
+            <h1 id="title">Web Development Courses</h1>
             <section id="product">
                
                   <h2>Our cool new product</h2>

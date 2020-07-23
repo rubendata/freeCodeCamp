@@ -51,3 +51,16 @@ section#product video, section#product iframe{
       height: 95%;
       
 }
+
+#title{
+      margin-top: 20px;
+      font-size: 2em;
+      width: 100%;
+      
+      text-align: center;
+      color: var(--secondary);
+      
+      font-weight: 500;
+      
+       
+}

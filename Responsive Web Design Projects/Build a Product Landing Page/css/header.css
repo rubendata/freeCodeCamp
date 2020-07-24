@@ -59,7 +59,7 @@
 .navicon { /*middle line of burger*/
       background: var(--secondary);
       display: block;
-      height: 0.3em;
+      height: 0.2em;
       position: relative;
       border-top: solid 4px var(--primary);
       border-bottom: solid 4px var(--primary);
@@ -72,7 +72,7 @@
       background: var(--secondary);
       display: block;
       content:"";
-      height: 0.3em;
+      height: 0.2em;
       position: absolute; 
       width: 100%; /*durch absolute verliert er seinen Bezug zu .navicon; daher muss man die width wieder auf 100% (von .navicon) setzen*/
       top: -7px;
@@ -84,7 +84,7 @@
       background: var(--secondary);
       display: block;
       content:"";
-      height: 0.3em;
+      height: 0.2em;
       position: absolute;
       width: 100%;
       top: 7px;
@@ -207,10 +207,7 @@
             width: 60%;
             display: flex;
             justify-content: flex-end;
-            font-size: 1.8em;
-            
             padding-right: 40px;
-            
             
       }
 
@@ -226,7 +223,6 @@
       #nav-bar-normal ul li a{
             margin-top: auto;
             text-decoration: none;
-            font-size: 1.8em;
             font-weight: 600;
             color: var(--secondary);
             text-transform: uppercase;

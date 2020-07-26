@@ -4,7 +4,7 @@
 
 section#product {
       
-      background-color: var(--primary);
+      
       padding: 20px;
       grid-area: "main";
       display: flex;
@@ -14,14 +14,17 @@ section#product {
       
 }
 
-img.icon {
-      width: 20px;
-      
-}
 
 #title, #product h2, #product h3{
       text-align: center;
       margin-top: 20px;
+}
+
+
+/*style the html, css and js icons*/
+img.icon {
+      width: 20px;
+      
 }
 
 .product{
@@ -33,6 +36,7 @@ img.icon {
       
 }
 
+
 .product-description{
       width: 90%;
       height: fit-content;
@@ -40,7 +44,49 @@ img.icon {
       margin-bottom: 10px;
       
 
+}
+/*style of intro div*/
+.product#intro{
+      background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%,rgba(255,255,255,.0) 70%), url(../img/web-developer.jpg);
+      text-shadow: black 1px 1px;
+      background-position: right;
+      background-size: cover;
+      width: 100%;
+      min-height:200px ;
+      
+}
 
+.product#intro #more{
+      padding: 10px;
+      
+}
+
+/*style the 'learn more' button*/
+#more #button {
+      margin-top: 10px;
+      padding: 5px 0;
+      border-radius: 5px;
+      background-color: var(--secondary);
+
+}
+
+#button a {
+      color: white;
+      
+}
+
+#button a:link, #button a:visited{
+      text-decoration: none;
+      
+}
+
+#button:hover{
+      cursor: pointer;
+}
+.product#intro p{
+      color: var(--primary);
+      text-align: center;
+      
 }
 
 
@@ -53,7 +99,7 @@ section#product video, section#product iframe{
 
 .video {
       margin-top: 20px;
-      width: 80%;    
+      width: 100%;    
       text-align: center;  
 }
 
@@ -83,13 +129,32 @@ section#product video, section#product iframe{
 
 @media screen and (min-width: 480px) {
     
+      .product#intro {
+           display: grid;
+           grid-template-columns: 50% 50%;
+            
+            
+      }
 
+      .product#intro #more {
+            grid-area: 0/1;
+      }
+
+      #more #button {
+           width: 60%;
+      
+      }
+
+     
 
 }
 
 @media screen and (min-width: 620px) {
+      .product#intro, .video{
+            width: 80%;
+            
+      }
 
-     
 }
 
 @media screen and (min-width: 768px) {
@@ -97,16 +162,7 @@ section#product video, section#product iframe{
 }
 
 @media screen and (min-width: 992px) {
-      section#product {
       
-            background-color: var(--primary);
-            padding: 20px;
-            grid-area: "main";
-            display: grid;
-            grid-template-columns: 5% 1fr 1fr 5%;
-            
-            
-      }
 }
 
 @media screen and (min-width: 1200px) {

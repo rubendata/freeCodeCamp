@@ -4,7 +4,7 @@
 
 :root{
       --primary: white;
-      --secondary: #02AAC1;
+      --secondary: rgb(2, 170, 193);
       --tertiary: #617CFF;
       
 }
@@ -16,7 +16,6 @@
 }
 
 body {
-      
       
       display: grid;
       overflow: hidden; /*need this overflow hidden because if the menu slides in then during the animation there appears a scrollbar. außerdem würde ohne dieses hidden das menu nach rechts raus gehen und unten in der horizontalen würde ein scrollbar entstehen*/
@@ -34,6 +33,8 @@ main {
       overflow: auto;
       
 }
+
+
 
 p, form, button, input, label, ul {
       font-size: 1.2em;

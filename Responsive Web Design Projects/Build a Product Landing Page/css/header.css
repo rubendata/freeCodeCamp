@@ -138,6 +138,7 @@
       opacity: 0; /*opacity starts with 0 for slide in effect*/
       display: block;
       width: 100%;
+      pointer-events: none;
      
 }
 
@@ -146,14 +147,16 @@
       display: block;
       opacity: 1; /*for slide in effect. goes from 0 to 1*/
       padding: 20px 0 20px 0;
-      transition:  opacity 0.0s linear;
+      transition:  opacity 1.0s linear;
+      pointer-events: all;
+      z-index: 2;
       
 }
 
 .menu-btn:checked ~ #menu {
       border: solid rgb(0, 187, 240, 1);
-      transition: margin-left 1s ease, border 2s ease, opacity 0s linear;
-      margin-left: 0px ;
+      transition: marginleft 10s ease, border 2s ease, opacity 0s linear;
+      margin-left: 0 ;
       
 }
 
@@ -182,7 +185,6 @@
            padding-right: 40px;
            
       }
-      
 
 
 }
@@ -223,7 +225,7 @@
       #nav-bar-normal ul li a{
             margin-top: auto;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             color: var(--secondary);
             text-transform: uppercase;
             
@@ -231,7 +233,7 @@
 
       #nav-bar-normal ul li a:hover{
             cursor: pointer;
-            font-size: 1.9em;
+            font-size: 1.05em;
             color: var(--tertiary)
 
       }

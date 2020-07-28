@@ -1,0 +1,43 @@
+Header
+	- courses statt products
+	- blog hinzufügen
+	- about einfügen -> auf eine neue Seite
+	- Sign In bzw.  "get started" button
+
+
+"Our courses container"
+	- bei klick auf more scrollt es zu den kursen
+	- slideshow für die kurse  wenn in großem device
+	- bei kleinen devices "our courses +" mit plus aufklickbar
+	- die kurse als cards
+		Kurse:
+			- HTML & CSS for beginners mit Logo free
+			- Advanced HTML & CSS mit logo premium
+			- JavaScript for beginners mit Logo free
+			- how to host a webstie free
+			- Advanced JavaScript mit logo premium
+			- Web APIs and Asynchronous Applications premium
+			- Build Tools, Webpack, and Service Worker premium
+			- SEO basics free
+			- Advanced SEO premium
+			- Learn how to learn free
+			- develop good habits free
+			- R for beginners
+			- Excel for Data Analysis
+			- git for beginners free
+			- AWS ...
+
+Our Courses Trailer
+	- Trailer über den Kurs
+		- was sind die Inhalte als Prozess / timeline dargestellt
+		- beispiele über die projekte
+		- ...
+
+"your benefits" container
+	- als card wie bei udacity
+
+
+
+Footer hinzufügen
+
+

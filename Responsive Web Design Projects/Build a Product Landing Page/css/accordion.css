@@ -1,0 +1,51 @@
+.container {
+      width: 90vw;
+      margin: auto;
+      margin-top: 20px;
+      
+  }
+  
+  .menu-item{
+      background-color: var(--secondary);
+      color: var(--primary);
+      position: relative;
+      cursor: pointer;
+      border-bottom: black solid 1px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+  }
+
+  .menu-item__text{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 50px;
+        width: 90%;
+        padding-left: 10px ;
+  }
+  
+  .carousel {
+      background-color: rgb(233, 230, 230);
+      overflow: auto;
+      display: none;
+      
+  }
+  
+  .display{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    padding: 15px;
+      
+  }
+  
+  
+  
+  .button{
+      width: 10%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 10px ;
+}

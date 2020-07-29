@@ -1,0 +1,63 @@
+.card {
+      background-color: white;
+      box-shadow: 4px 4px 6px 1px rgba(0, 0, 0, .4);
+      height: 200px;
+      width: 200px;
+      flex-shrink: 0;
+      margin-right: 20px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      
+  }
+
+  .card__header{
+      background-size: 100%;
+      height: 50%;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+  }
+
+  .card__header#card_one{
+      background-image: url(//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3bEiaTl2juSaiX6x4NktZG/119e42618c2e3de3c7e9bd64ed15b122/nd030-2-catalog-card.jpg);
+      
+  }
+
+  .card__header#card_two{
+      background-image: url(//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/3spZhTUaPA81u0PJSrrUaA/5a69d54ab457494af76412429f203408/catalog_image_nd030-1.jpg);
+      
+  }
+
+  .card__header#card_three{
+      background-image: url("//www.udacity.com/www-proxy/contentful/assets/2y9b3o528xhq/7c906TlrrN7t8YHKd1VZTh/ac9756cf1f4cbe7eff1c73906af938e5/catalog_image_nd030.jpg");
+  }
+
+.card__icon{
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: pink;
+      height: 30%;
+      width: 35%;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      
+      
+}
+
+.free {
+      background-color: lightskyblue;
+}
+
+.premium{
+      background-color: gold;
+}
+
+  .card__body{
+      
+
+  }

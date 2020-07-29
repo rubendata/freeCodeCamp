@@ -3,13 +3,13 @@
 /*general styling*/
 
 section#product {
-      padding: 20px;
       grid-area: "main";
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       margin: auto;
+      
       
 }
 
@@ -50,7 +50,7 @@ img.icon {
       text-shadow: black 1px 1px;
       background-position: right;
       background-size: cover;
-      width: 100%;
+      width: 90vw;
       min-height:200px ;
       
 }

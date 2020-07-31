@@ -76,7 +76,20 @@
 
 .card__body__description li{
       color: black;
-      list-style-image: url(../img/check.svg);
-      list-style-position: inside;
+      list-style: none;
+      display: flex;
+      align-items: center;
       
 }
+
+svg.check__svg {
+     
+      fill: none;
+      stroke: currentcolor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      color: green;
+      margin-right: 5px;
+  }
+

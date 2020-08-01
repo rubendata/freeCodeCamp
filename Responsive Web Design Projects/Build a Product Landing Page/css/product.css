@@ -37,7 +37,7 @@ img.icon {
 
 
 .product-description{
-      width: 90%;
+      width: 100%;
       height: fit-content;
       margin-top: 10px;
       margin-bottom: 10px;
@@ -50,7 +50,7 @@ img.icon {
       text-shadow: black 1px 1px;
       background-position: right;
       background-size: cover;
-      width: 90vw;
+      width: 100%;
       min-height:200px ;
       
 }

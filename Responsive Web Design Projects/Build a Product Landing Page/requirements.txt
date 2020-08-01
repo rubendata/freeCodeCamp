@@ -6,12 +6,12 @@ Header
 
 
 "Our courses container"
-	- bei klick auf more scrollt es zu den kursen
+	x bei klick auf more scrollt es zu den kursen
 	- slideshow für die kurse  wenn in großem device
-	- bei kleinen devices "our courses +" mit plus aufklickbar
+	x bei kleinen devices "our courses +" mit plus aufklickbar
 	- die kurse als cards
 		Kurse:
-			- HTML & CSS for beginners mit Logo free
+			x HTML & CSS for beginners mit Logo free
 			- Advanced HTML & CSS mit logo premium
 			- JavaScript for beginners mit Logo free
 			- how to host a webstie free
